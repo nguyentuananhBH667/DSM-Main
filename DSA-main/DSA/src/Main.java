@@ -1,6 +1,5 @@
 import Models.Student;
 
-import java.io.FileNotFoundException;
 import java.util.*;
 import Sort.ISort;
 import Search.ISearch;
@@ -36,7 +35,7 @@ public class Main {
         String s = sc.next();
         switch(s) {
             case "1": {
-                System.out.println("1) Enter student 's information to add");
+                System.out.println("1) Enter student's information to add");
                 add(students);
                 break;
             }
@@ -59,6 +58,7 @@ public class Main {
 
         }
     }
+
     static void add(Student[] students) {
         Scanner sc = new Scanner(System.in);
         for(int i = 0; i < students.length;i++) {

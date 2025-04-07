@@ -5,14 +5,12 @@ public class Student {
     private String name;
     private double mark;
     private String rank;
+    private Student[] add;
 
     public Student(int id, String name, double mark) {
         this.id = id;
         this.name = name;
         this.mark = mark;
-    }
-    public Student() {
-
     }
 
     public int getId() {
@@ -60,4 +58,23 @@ public class Student {
     public void setMark(double mark) {
         this.mark = mark;
     }
+
+    class Node {
+        Student key;
+        Node left, right;
+
+        public Node(Student item) {
+            key = item;
+            left = right = null;
+        }
+    }
+
+    class StudentTree {
+        Node root;
+
+        public StudentTree() {
+            root = null;
+        }
+    }
+
 }

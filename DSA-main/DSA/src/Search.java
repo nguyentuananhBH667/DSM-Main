@@ -2,7 +2,6 @@ import Models.Student;
 import Search.ISearch;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import Sort.ISort;
 public class Search implements ISearch {
     @Override

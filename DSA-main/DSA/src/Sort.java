@@ -91,7 +91,17 @@ public class Sort implements ISort {
         return students;
     }
     public Student[] sortByMark(Student[] students, int low, int high) {
-        sort(students, low, high);
+        int n = students.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (students[j].getMark() > students[j + 1].getMark()) {
+                    Student temp = students[j];
+                    students[j] = students[j + 1];
+                    students[j + 1] = temp;
+                }
+            }
+        }
         return students;
     }
+
 }
